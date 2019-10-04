@@ -38,7 +38,7 @@ class App extends Component {
     axios
       .delete(`https://practiceapi.devmountain.com/api/posts?id=${id}`)
       .then(results => {
-        this.setState({ post: results.data });
+        this.setState({ posts: results.data });
       });
   }
 
@@ -67,7 +67,7 @@ class App extends Component {
               date={post.date}
               id={post.id}
               updatePostFn={this.updatePost}
-              deletePostfn={this.deletePost}
+              deletePostFn={this.deletePost}
             />
           ))}
         </section>
